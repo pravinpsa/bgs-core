@@ -11,11 +11,6 @@ import java.util.Date;
 public class MyService extends BackgroundService {
 
 	@Override
-	protected JSONObject doWork() {
-	   return null;
-	}
-
-	@Override
 	protected JSONObject getConfig() {
 	   return null;
 	}
