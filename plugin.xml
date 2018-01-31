@@ -36,9 +36,13 @@
                     <action android:name="android.intent.action.BOOT_COMPLETED"></action>   
                 </intent-filter> 
             </receiver>
-            
+        <service android:name="com.red_folder.phonegap.plugin.backgroundservice.MyService">
+           <intent-filter>
+              <action android:name="com.red_folder.phonegap.plugin.backgroundservice.MyService" />
+           </intent-filter>
+        </service>
         </config-file>
-
+          <source-file src="src/android/MyService.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice" />
          <source-file src="src/android/BackgroundService.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice" />
         <source-file src="src/android/BackgroundServicePlugin.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice" />
         <source-file src="src/android/BackgroundServicePluginLogic.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice" />
