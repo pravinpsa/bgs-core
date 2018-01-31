@@ -1,3 +1,5 @@
+package com.red_folder.phonegap.plugin.backgroundservice;
+
 import com.red_folder.phonegap.plugin.backgroundservice.BackgroundService;
 import org.json.JSONException;
 import org.json.JSONObject;
