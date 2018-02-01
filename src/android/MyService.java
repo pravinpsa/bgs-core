@@ -33,7 +33,7 @@ public class MyService extends BackgroundService {
 	}
 
 	@Override
-	protected JSONObject doWork() {
+	protected JSONObject doWork() throws IOException{
 	   JSONObject result = new JSONObject();
 			
 	   try {
