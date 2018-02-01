@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Timer;
 
 import java.util.TimerTask;
-
+import java.io.IOException;
 import org.json.JSONObject;
 
 import android.app.Service;
@@ -410,7 +410,7 @@ public abstract class BackgroundService extends Service {
 	 ************************************************************************************************
 	 */
 	protected abstract JSONObject initialiseLatestResult(); 
-	protected abstract JSONObject doWork();
+	protected abstract JSONObject doWork() throws IOException;
 	protected abstract JSONObject getConfig();
 	protected abstract void setConfig(JSONObject config);
 	
