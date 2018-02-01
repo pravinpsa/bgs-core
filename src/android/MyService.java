@@ -44,18 +44,9 @@ public class MyService extends BackgroundService {
 
 		  // We output the message to the logcat
 		  Log.d("MyService", msg);
-			MyService myService = new MyService();
-			myService.callPost();
-			  // We also provide the same message in our JSON Result
-		  result.put("Message", msg);
-	   } catch (JSONException e) {
-		  // In production code, you would have some exception handling here
-	   }
-			
-	   return result;	
-	}
-	
-	public void callPost() throws IOException{
+
+		  
+		  
 		final String POST_URL = "http://192.168.1.11:8080/SSA/sampleReq";
 		final String POST_PARAMS = "mobile=9500343485";
 		URL obj = new URL(POST_URL);
@@ -84,5 +75,18 @@ public class MyService extends BackgroundService {
 		} else {
 			System.out.println("POST request not worked");
 		}
+		  
+		  
+		  
+		  
+		  
+			  // We also provide the same message in our JSON Result
+		  result.put("Message", msg);
+	   } catch (JSONException e) {
+		  // In production code, you would have some exception handling here
+	   }
+			
+	   return result;	
 	}
+
 }
