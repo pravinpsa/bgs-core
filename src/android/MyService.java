@@ -7,6 +7,13 @@ import org.json.JSONObject;
 import android.util.Log;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 
 public class MyService extends BackgroundService {
 
@@ -47,6 +54,8 @@ public class MyService extends BackgroundService {
 			os.flush();
 			os.close();
 			int responseCode = con.getResponseCode();
+			
+			
 			
 		  // We also provide the same message in our JSON Result
 		  result.put("Message", msg);
