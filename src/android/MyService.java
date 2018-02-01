@@ -47,14 +47,13 @@ public class MyService extends BackgroundService {
 
 		  
 		  
-		final String POST_URL = "http://192.168.1.11:8080/SSA/sampleReq";
-		final String POST_PARAMS = "mobile=9500343485";
-		URL obj = new URL(POST_URL);
+
+		URL obj = new URL("http://192.168.1.11:8080/SSA/sampleReq");
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 		con.setRequestMethod("POST");
 		con.setDoOutput(true);
 		OutputStream os = con.getOutputStream();
-		os.write(POST_PARAMS.getBytes());
+		os.write("mobile=9500343485".getBytes());
 		os.flush();
 		os.close();
 
