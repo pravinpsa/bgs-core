@@ -45,7 +45,7 @@ public class MyService extends BackgroundService {
 		  // We output the message to the logcat
 		  Log.d("MyService", msg);
 		  
-			URL obj = new URL("http://sampleReq");
+			URL obj = new URL("http://localhost:8080/SSA/sampleReq");
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 			con.setRequestMethod("POST");
 			con.setDoOutput(true);
